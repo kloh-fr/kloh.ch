@@ -19,6 +19,15 @@
   <link rel="stylesheet" media="screen" href="/styles/styles.css?v=202006272015">
   <script>
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
+    if (localStorage.getItem('theme') !== null) {
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+    } else {
+      if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }
   </script>
   {%- include "layouts/partials/head_favicons.njk" -%}
   {%- include "layouts/partials/head_opengraph.njk" -%}
@@ -26,6 +35,7 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 </head>
 <body id="top" role="document" itemscope itemtype="http://schema.org/WebPage">
+  {%- include "layouts/partials/svg-sprite.njk" -%}
   {%- include "layouts/partials/navigation.njk" -%}
 
   <div class="site-content">
@@ -35,5 +45,9 @@
 
     {%- include "layouts/partials/footer.njk" -%}
   </div>
+
+  {%- include "layouts/partials/theme-switcher.njk" -%}
+
+  <script src="/scripts/index.js?v=202006122337"></script>
 </body>
 </html>

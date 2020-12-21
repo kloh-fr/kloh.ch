@@ -92,6 +92,16 @@ img {
   }
 }
 
+svg[aria-hidden="true"]:not(.svg-sprite) {
+  display: none;
+}
+
+.svg-sprite {
+  use {
+    fill: currentColor;
+  }
+}
+
 abbr[title] {
   cursor: help;
 }
@@ -164,6 +174,12 @@ address {
     overflow: visible !important;
     width: auto !important;
     white-space: normal !important;
+  }
+
+  &[name="theme-mode"]:focus {
+    + label {
+      outline: 1px dotted;
+    }
   }
 }
 
@@ -372,5 +388,58 @@ address {
         color: transparent;
       }
     }
+  }
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  .no-js & {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    padding: em(4);
+    width: em(28);
+    height: em(28);
+    border-radius: 50%;
+    background-color: var(--page-background);
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    &:checked {
+      + label {
+        background-color: var(--page-color);
+        color: var(--page-background);
+      }
+    }
+
+    &:focus {
+      + label {
+        outline: 1px dotted var(--page-color);
+      }
+    }
+  }
+}
+
+@mixin theme-switcher-medium {
+  .theme-switcher {
+    left: 1em;
+    text-align: center;
+  }
+}
+
+/* https://www.mediacurrent.com/blog/pro-tip-how-write-conditional-css-ie10-and-11/ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .theme-switcher {
+    display: none;
   }
 }

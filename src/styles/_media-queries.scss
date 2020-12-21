@@ -13,6 +13,7 @@
   @include nav-medium;
   @include content-wrapper-medium;
   @include footer-medium;
+  @include theme-switcher-medium;
 }
 
 @media (min-width: em(450)) {
