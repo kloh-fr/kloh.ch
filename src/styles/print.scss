@@ -1,0 +1,44 @@
+@import "vendor/system-font";
+
+@page {
+  margin: 1cm 3cm;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+.site-navigation,
+.site-footer,
+.theme-switcher,
+.screen-reader-text,
+svg[hidden] {
+  display: none;
+}
+
+blockquote,
+ul,
+ol {
+  page-break-inside: avoid;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  page-break-after: avoid;
+}
+
+a[href^="http"]::after {
+  content: " [" attr(href) "] ";
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
