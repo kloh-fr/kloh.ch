@@ -1,4 +1,5 @@
 const moment = require("moment");
+const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
@@ -37,6 +38,20 @@ module.exports = function (eleventyConfig) {
     return moment().utcOffset("+01:00").format(date);
   });
 
+  // Minify HTML
+  // https://www.11ty.dev/docs/config/#transforms
+  eleventyConfig.addTransform("htmlmin", function (value, outputPath) {
+    if (outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(value, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return value;
+  });
 
   return {
     dir: {
