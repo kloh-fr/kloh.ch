@@ -1,0 +1,19 @@
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+
+  dt,
+  dd {
+    width: 50%;
+  }
+
+  dt {
+    text-align: right;
+
+    &::after {
+      content: "·";
+      display: inline-block;
+      margin: 0 0.5em;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<dl class="profiles">
+{%- for item in profil -%}
+  <dt>{{ item.site }}</dt>
+  <dd><a href="{{ item.url }}" rel="me external">{{ item.name }} <span class="screen-reader-text">(lien externe)</span></a></dd>
+{%- endfor -%}
+</dl>
