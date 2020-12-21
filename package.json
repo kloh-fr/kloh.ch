@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf dist",
+    "clean": "rmdir /s /q dist",
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
     "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
