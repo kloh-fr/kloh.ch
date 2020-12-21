@@ -14,6 +14,7 @@
   {%- else %}
   <meta name="description" content="{{ site.description }}">
   {%- endif %}
+  <meta name="author" content="Luc Poupard">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="/styles/styles.css?v=202006272015">
   <script>
@@ -22,6 +23,7 @@
   {%- include "layouts/partials/head_favicons.njk" -%}
   {%- include "layouts/partials/head_opengraph.njk" -%}
   {%- include "layouts/partials/head_twitter-card.njk" -%}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 </head>
 <body id="top" role="document" itemscope itemtype="http://schema.org/WebPage">
   {%- include "layouts/partials/navigation.njk" -%}
