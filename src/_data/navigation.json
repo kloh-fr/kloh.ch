@@ -4,6 +4,10 @@
     "url": "/"
   },
   {
+    "name": "Expériences",
+    "url": "/experiences/"
+  },
+  {
     "name": "Contact",
     "url": "/contact/"
   }
