@@ -13,6 +13,100 @@ ErrorDocument 403 /403.html
 ErrorDocument 404 /404.html
 ErrorDocument 500 /500.html
 
+# Redirections
+## Pages
+RedirectPermanent /en /
+RedirectPermanent /index-en.html /
+
+RedirectPermanent /services /experiences/
+RedirectPermanent /references /projets/
+RedirectPermanent /cv-chef-de-projet-web-et-mobile /experiences/
+RedirectPermanent /mentions-legales /credits/
+
+RedirectPermanent /graphisme.php /projets/
+RedirectPermanent /graphisme_couleur.php /projets/
+RedirectPermanent /graphisme_bannieres-pixmania.php /projets/
+RedirectPermanent /graphisme_b3yond-th3-r3al-world.php /projets/
+RedirectPermanent /animation_tachikoma.php /projets/
+RedirectPermanent /animation_parking.php /projets/
+RedirectPermanent /animation_rockongaku.php /projets/
+RedirectPermanent /webdesign_genealogie.php /projets/
+RedirectPermanent /webdesign_timesplitters-games.php /projets/
+RedirectPermanent /webdesign_scea-domaine-de-bassy.php /projets/
+RedirectPermanent /webdesign_scea-anglade-bellevue.php /projets/
+RedirectPermanent /webdesign_tsg-music.php /projets/
+RedirectPermanent /webdesign_kloh-v2.php /projets/
+RedirectPermanent /webdesign_video-games-records.php /projets/
+RedirectPermanent /webdesign_pgr-photo-blog.php /projets/
+RedirectPermanent /webdesign_prete-a-mettre.php /projets/
+RedirectPermanent /webdesign_tachikomania.php /projets/
+
+RedirectPermanent /pgrphotoblog /
+RedirectPermanent /pgrphotoblog/(.*)$ /
+
+## Blog
+RedirectPermanent /blog /articles/
+RedirectPermanent /blog/(.*)$ /articles/
+RedirectPermanent /date/(.*)$ /articles/
+RedirectPermanent /cat/(.*)$ /articles/
+RedirectPermanent /tag/(.*)$ /articles/
+RedirectPermanent /en/date/(.*)$ /articles/
+
+RedirectPermanent /feed /feed.xml
+RedirectPermanent /feed/atom /feed.xml
+
+RedirectPermanent /benefices-de-la-vue-conversation-des-e-mails-1321 /articles/benefices-de-la-vue-conversation-des-e-mails/
+RedirectPermanent /changement-de-domaine-981 /articles/changement-de-domaine/
+RedirectPermanent /compass-import-concatenation-et-variables-353 /articles/compass-import-concatenation-et-variables/
+RedirectPermanent /craw2013-conclusion-retours-et-impressions-678 /articles/craw2013-conclusion-retours-et-impressions/
+RedirectPermanent /craw2013-evaluation-logiciel-libre-et-accessibilite-des-videos-2-1359 /articles/craw2013-evaluation-logiciel-libre-et-accessibilite-des-videos/
+RedirectPermanent /craw2013-evaluation-logiciel-libre-et-accessibilite-des-videos-674 /articles/craw2013-evaluation-logiciel-libre-et-accessibilite-des-videos/
+RedirectPermanent /craw2013-gestion-de-projet-584 /articles/craw2013-gestion-de-projet-methodes-et-enjeux/
+RedirectPermanent /craw2013-gestion-de-projet-methodes-et-enjeux-584 /articles/craw2013-gestion-de-projet-methodes-et-enjeux/
+RedirectPermanent /craw2013-html5-aria-et-accessibilite-web-479 /articles/craw2013-html5-aria-et-accessibilite-web/
+RedirectPermanent /craw2013-mobilite-et-accessibilite-519 /articles/craw2013-mobilite-et-accessibilite/
+RedirectPermanent /craw2013-utilisabilite-des-systemes-interactifs-614 /articles/craw2013-utilisabilite-des-systemes-interactifs/
+RedirectPermanent /creer-plusieurs-pages-avec-photoshop-253 /articles/creer-plusieurs-pages-avec-photoshop/
+RedirectPermanent /debuter-avec-sass-et-compass-68 /articles/debuter-avec-sass-et-compass/
+RedirectPermanent /france-demonarchie-et-extremisme-syndical-1063 /articles/france-demonarchie-et-extremisme-syndical/
+RedirectPermanent /hello-world-1 /articles/hello-world/
+RedirectPermanent /homosexualite-et-parentalite-2-396 /articles/homosexualite-et-parentalite-2/
+RedirectPermanent /homosexualite-et-parentalite-288 /articles/homosexualite-et-parentalite/
+RedirectPermanent /importance-experience-utilisateur-820 /articles/importance-experience-utilisateur/
+RedirectPermanent /kiwi-party-2013-accelerer-ses-pages-web-878 /articles/kiwi-party-2013-accelerer-ses-pages-web/
+RedirectPermanent /kiwi-party-2013-css-livres-792 /articles/kiwi-party-2013-css-livres/
+RedirectPermanent /kiwi-party-2013-du-zoning-ou-mockup-829 /articles/kiwi-party-2013-du-zoning-ou-mockup/
+RedirectPermanent /kiwi-party-2013-google-analytics-integrateur-822 /articles/kiwi-party-2013-google-analytics-integrateur/
+RedirectPermanent /kiwi-party-2013-pepins-et-accessibilite-827 /articles/kiwi-party-2013-pepins-et-accessibilite/
+RedirectPermanent /la-tele-realite-drogue-du-peuple-270 /articles/la-tele-realite-drogue-du-peuple/
+RedirectPermanent /le-pouvoir-des-feuilles-de-style-utilisateur-143 /articles/le-pouvoir-des-feuilles-de-style-utilisateur/
+RedirectPermanent /les-petits-ruisseaux-font-les-grandes-rivieres-464 /articles/les-petits-ruisseaux-font-les-grandes-rivieres/
+RedirectPermanent /merveilleuse-dematerialisation-997 /articles/merveilleuse-dematerialisation/
+RedirectPermanent /paris-web-2013-ateliers-et-conclusion-1142 /articles/paris-web-2013-ateliers-et-conclusion/
+RedirectPermanent /paris-web-2013-conferences-du-jeudi-1107 /articles/paris-web-2013-conferences-du-jeudi/
+RedirectPermanent /paris-web-2013-conferences-du-vendredi-1139 /articles/paris-web-2013-conferences-du-vendredi/
+RedirectPermanent /paris-web-2014-vue-du-spectateur-1457 /articles/paris-web-2014-vue-du-spectateur/
+RedirectPermanent /paris-web-2014-vue-orateur-1398 /articles/paris-web-2014-vue-orateur/
+
+RedirectPermanent /wp-content/uploads/2013/02/installation-ruby.png /images/articles/debuter-avec-sass-et-compass/installation-ruby.png
+RedirectPermanent /wp-content/uploads/2013/02/installation-compass.png /images/articles/debuter-avec-sass-et-compass/installation-compass.png
+RedirectPermanent /wp-content/uploads/2013/02/compass-projet.png /images/articles/debuter-avec-sass-et-compass/compass-projet.png
+RedirectPermanent /wp-content/uploads/2013/02/compass-congrats.png /images/articles/debuter-avec-sass-et-compass/compass-congrats.png
+RedirectPermanent /wp-content/uploads/2013/02/faceboo-suggestion.png /articles/le-pouvoir-des-feuilles-de-style-utilisateur/
+RedirectPermanent /wp-content/uploads/2013/03/objet-convertir.png /images/articles/creer-plusieurs-pages-avec-photoshop/objet-convertir.png
+RedirectPermanent /wp-content/uploads/2013/03/objet-dynamique.png /images/articles/creer-plusieurs-pages-avec-photoshop/objet-dynamique.png
+RedirectPermanent /wp-content/uploads/2013/03/remplacer-contenu.png /images/articles/creer-plusieurs-pages-avec-photoshop/remplacer-contenu.png
+RedirectPermanent /wp-content/uploads/2013/04/jpmengual.jpg /images/articles/craw2013-evaluation-logiciel-libre-et-accessibilite-des-videos/jpmengual.jpg
+RedirectPermanent /wp-content/uploads/2013/10/tgv-lyria.jpg /images/articles/importance-experience-utilisateur/tgv-lyria.jpg
+RedirectPermanent /wp-content/uploads/2013/10/tgv-lyria-signaletique.jpg /images/articles/importance-experience-utilisateur/tgv-lyria-signaletique.jpg
+RedirectPermanent /wp-content/uploads/2013/11/conversation-email.png /images/articles/benefices-de-la-vue-conversation-des-e-mails/conversation-email.png
+RedirectPermanent /wp-content/uploads/2013/11/iphone_sms_discussion.png /images/articles/benefices-de-la-vue-conversation-des-e-mails/iphone-sms-discussion.png
+
+RedirectPermanent /wp-content/themes/kloh/tileicon.png /images/luc-poupard.png
+
+## Autres contenus
+RedirectPermanent /_temp/w3q/editeur/tiny-mce.html /w3q/editeur/tiny-mce.html
+
 # Encodage
 ## Déclarer UTF-8 comme jeu de caractères par défaut (appliqué par défaut aux fichiers de type text/plain et text/html)
 AddDefaultCharset utf-8
