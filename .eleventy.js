@@ -3,6 +3,7 @@ const moment = require("moment");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy("src/.htaccess");
   // date filter (localized)
   // https://jamstatic.fr/2019/09/07/site-multilingue-avec-eleventy/
   // https://momentjs.com/

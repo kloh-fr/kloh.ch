@@ -1,0 +1,181 @@
+# Encodage
+## Déclarer UTF-8 comme jeu de caractères par défaut (appliqué par défaut aux fichiers de type text/plain et text/html)
+AddDefaultCharset utf-8
+
+## Forcer l'encodage UTF-8 sur certains fichiers
+<IfModule mod_mime.c>
+    AddCharset utf-8 .css .js .json .jsonld .xml .rss .atom
+</IfModule>
+
+# Types MIME
+# Associer un type MIME à certaines extensions
+# Tip : pour forcer un type de fichier à être téléchargé : AddType application/octet-stream .extension
+
+## JavaScript / JSON
+# Écrase les types MIME text/javascript erronés
+AddType application/javascript              js
+AddType application/json                    json map
+AddType application/ld+json                 jsonld
+
+## SVG
+# Requis pour les fonts SVG sur iPad : twitter.com/FontSquirrel/status/14855840545
+AddType image/svg+xml                       svg svgz
+AddEncoding gzip                            svgz
+
+## Fonts
+AddType  application/vnd.ms-fontobject      eot
+AddType  application/x-font-ttf             ttf ttc
+AddType  font/opentype                      otf
+AddType  afont/woff                         woff
+AddType  font/woff2                         woff2
+
+
+## Audio
+AddType audio/mp4                           m4a f4a f4b
+AddType audio/ogg                           oga ogg opus
+
+## Vidéo
+AddType video/mp4                           f4v f4p m4v mp4
+AddType video/ogg                           ogv
+AddType video/webm                          webm
+AddType video/x-flv                         flv
+
+## Images
+AddType image/x-icon                        ico
+AddType image/jpeg                          jpeg jpg jpe JPG
+AddType image/gif                           gif GIF
+
+## Autres
+AddType application/octet-stream            safariextz
+AddType application/x-chrome-extension      crx
+AddType application/x-opera-extension       oex
+AddType application/x-web-app-manifest+json webapp
+AddType application/x-xpinstall             xpi
+AddType application/xml                     atom rdf rss xml
+AddType image/webp                          webp
+AddType image/x-icon                        cur
+AddType text/cache-manifest                 appcache manifest
+AddType application/manifest+json           webmanifest
+AddType text/vtt                            vtt
+AddType text/x-component                    htc
+AddType text/x-vcard                        vcf
+
+# Compression Gzip
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE "application/ld+json"
+    AddOutputFilterByType DEFLATE "application/manifest+json"
+    AddOutputFilterByType DEFLATE "application/rdf+xml"
+    AddOutputFilterByType DEFLATE "application/rss+xml"
+    AddOutputFilterByType DEFLATE "application/schema+json"
+    AddOutputFilterByType DEFLATE "application/vnd.geo+json"
+    AddOutputFilterByType DEFLATE "application/vnd.ms-fontobject"
+    AddOutputFilterByType DEFLATE "application/x-font-ttf"
+    AddOutputFilterByType DEFLATE "application/x-javascript"
+    AddOutputFilterByType DEFLATE "application/x-web-app-manifest+json"
+    AddOutputFilterByType DEFLATE "application/xhtml+xml"
+    AddOutputFilterByType DEFLATE "application/xml"
+    AddOutputFilterByType DEFLATE "font/eot"
+    AddOutputFilterByType DEFLATE "font/opentype"
+    AddOutputFilterByType DEFLATE "image/bmp"
+    AddOutputFilterByType DEFLATE "image/svg+xml"
+    AddOutputFilterByType DEFLATE "image/vnd.microsoft.icon"
+    AddOutputFilterByType DEFLATE "image/x-icon"
+    AddOutputFilterByType DEFLATE "text/cache-manifest"
+    AddOutputFilterByType DEFLATE "text/css"
+    AddOutputFilterByType DEFLATE "text/html"
+    AddOutputFilterByType DEFLATE "text/javascript"
+    AddOutputFilterByType DEFLATE "text/plain"
+    AddOutputFilterByType DEFLATE "text/vcard"
+    AddOutputFilterByType DEFLATE "text/vnd.rim.location.xloc"
+    AddOutputFilterByType DEFLATE "text/vtt"
+    AddOutputFilterByType DEFLATE "text/x-component"
+    AddOutputFilterByType DEFLATE "text/x-cross-domain-policy"
+    AddOutputFilterByType DEFLATE "text/xml"
+</IfModule>
+
+# Cache des fichiers statiques
+<IfModule mod_expires.c>
+    ExpiresActive on
+
+    ## Durée par défaut
+    ExpiresDefault                              "access plus 1 month"
+
+    ## HTML
+    ExpiresByType text/html                     "access plus 0 seconds"
+
+    ## Cache manifeste
+    ExpiresByType text/cache-manifest           "access plus 0 seconds"
+
+    ## Données
+    ExpiresByType text/xml                      "access plus 0 seconds"
+    ExpiresByType application/xml               "access plus 0 seconds"
+    ExpiresByType application/json              "access plus 0 seconds"
+    ExpiresByType application/ld+json           "access plus 0 seconds"
+
+    ## Composants HTC
+    ExpiresByType text/x-component              "access plus 1 year"
+
+    ## Favicon
+    ExpiresByType image/x-icon                  "access plus 1 year"
+
+    ## Images, audio et vidéo
+    ExpiresByType image/gif                     "access plus 1 month"
+    ExpiresByType image/png                     "access plus 1 month"
+    ExpiresByType image/jpg                     "access plus 1 month"
+    ExpiresByType image/jpeg                    "access plus 1 month"
+    ExpiresByType video/ogg                     "access plus 1 month"
+    ExpiresByType audio/ogg                     "access plus 1 month"
+    ExpiresByType video/mp4                     "access plus 1 month"
+    ExpiresByType video/webm                    "access plus 1 month"
+
+    ## Fonts
+    ExpiresByType application/x-font-ttf        "access plus 1 year"
+    ExpiresByType font/opentype                 "access plus 1 year"
+    ExpiresByType application/x-font-woff       "access plus 1 year"
+    ExpiresByType image/svg+xml                 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+
+    ## CSS et JavaScript
+    ExpiresByType text/css                      "access plus 1 month"
+    ExpiresByType application/javascript        "access plus 1 month"
+
+    ## Flux de syndication
+    ExpiresByType application/rss+xml           "access plus 1 hour"
+    ExpiresByType application/atom+xml          "access plus 1 hour"
+</IfModule>
+
+## Permettre le chargement des ressources non compressées
+<IfModule mod_headers.c>
+    <FilesMatch ".(js|css|xml|gz|html)$">
+        Header append Vary: Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+# Sécurité
+
+## Interdire la lecture d'un répertoire sans fichier index
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+## Interdire l'accès au fichier htaccess
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<IfModule mod_headers.c>
+    ## Bloquer les scripts qui ne sont pas sur le domaine du site
+    Header set Content-Security-Policy "script-src 'self'"
+    Header set Content-Security-Policy "base-uri 'self'"
+
+    ## Bloquer l'intégration des pages du site dans une iframe
+    Header always set X-FRAME-OPTIONS "DENY"
+
+    # Désactiver la détection automatique du type de ressource
+    Header always set X-Content-Type-Options "nosniff"
+
+    Header always set Strict-Transport-Security "max-age=31536000"
+    Header always set X-Xss-Protection "1; mode=block"
+    Header always set Referrer-Policy "no-referrer"
+</IfModule>
