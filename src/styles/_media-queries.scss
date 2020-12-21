@@ -17,6 +17,7 @@
 
 @media (min-width: em(450)) {
   @include project-large;
+  @include article-large;
 }
 
 @media (min-width: em(450)) and (max-width: em(779)) {

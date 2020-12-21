@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+ogtype: article
+---
+<article itemscope itemType="http://schema.org/BlogPosting">
+  <h1 itemprop="name">{{ title | safe }}</h1>
+  <div class="article-meta">Publié le <time datetime="{{ date | timestamp }}" itemprop="datePublished">{{ date | date('LL', locale) }}</time> · Modifié la dernière fois le <time datetime="{{ dateUpdate | timestamp }}">{{ dateUpdate | date('LL', locale) }}</time> </div>
+  <div itemprop="articleBody">
+    {{ content | safe }}
+  </div>
+</article>

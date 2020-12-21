@@ -5,6 +5,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/.htaccess");
 
+  // https://www.11ty.dev/docs/collections/#getfilteredbyglob(-glob-)
+  eleventyConfig.addCollection("articles", function (collection) {
+    return collection.getFilteredByGlob("./src/articles/*.md");
+  });
+
   eleventyConfig.addCollection("projects", function (collection) {
     return collection.getFilteredByGlob("./src/projets/*.md");
   });

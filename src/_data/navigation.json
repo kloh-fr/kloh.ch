@@ -12,6 +12,10 @@
     "url": "/projets/"
   },
   {
+    "name": "Articles",
+    "url": "/articles/"
+  },
+  {
     "name": "Contact",
     "url": "/contact/"
   }

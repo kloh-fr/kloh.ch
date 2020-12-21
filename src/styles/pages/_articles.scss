@@ -1,0 +1,49 @@
+/* Articles */
+.articles {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+
+  time {
+    display: block;
+  }
+}
+
+.article-meta {
+  margin-bottom: 3em;
+}
+
+.note {
+  font-style: italic;
+}
+
+/* Notes de bas de page */
+.notes {
+  margin-top: 3em;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 0.2rem;
+    width: 100%;
+    background-image: var(--bullet-background);
+    background-position: left -0.9rem center;
+    background-repeat: repeat-x;
+  }
+}
+
+@mixin article-large {
+  .notes {
+    &::before {
+      background-position: center;
+    }
+  }
+}
+
+a[href^="#ref-note"] {
+  &::after {
+    content: "↩︎";
+  }
+}

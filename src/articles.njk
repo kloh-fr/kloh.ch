@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Articles
+---
+
+<h1>Articles et actualités</h1>
+<ul class="articles">
+{%- for article in collections.articles | reverse -%}
+  <li>
+    <time datetime="{{ article.data.date }}" itemprop="datePublished">{{ article.data.date | date('LL', locale) }}</time>
+    {%- if article.data.externalUrl -%}
+    Sur {{ article.data.externalSite }}&nbsp;: <a href="{{ article.data.externalUrl }}" rel="external">{{ article.data.title | safe }} <span class="screen-reader-text">(lien externe)</span></a>
+    {%- else -%}
+    <a href="/{{ article.data.permalink }}">{{ article.data.title | safe }}</a>
+    {%- endif -%}
+  </li>
+{%- endfor -%}
+</ul>
