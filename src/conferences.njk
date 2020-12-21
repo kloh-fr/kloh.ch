@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: Conférences
+permalink: conferences/
+---
+
+<h1>Conférences et prises de paroles</h1>
+
+{%- if collections.upcoming_conference -%}
+  <h2>À venir</h2>
+  <ul class="conferences">
+  {%- for conference in collections.upcoming_conference | reverse -%}
+    <li class="conferences-item">
+      <a href="/{{ conference.data.permalink }}">{{ conference.data.title | safe }}</a>
+      <div class="conferences-item__meta">
+        {%- if conference.data.dateUndefined %}
+        Date à venir
+        {%- else %}
+        <time datetime="{{ conference.data.date }}" itemprop="datePublished">{{ conference.data.date | date('LL', locale) }}</time>
+        {%- endif %}
+        ·
+        {{ conference.data.event.name }}
+      </div>
+    </li>
+  {%- endfor -%}
+  </ul>
+{%- endif -%}
+
+{%- if collections.past_conference -%}
+  <h2>Événements passés</h2>
+  <ul class="conferences">
+  {%- for conference in collections.past_conference | reverse -%}
+    <li class="conferences-item">
+      <a href="/{{ conference.data.permalink }}">{{ conference.data.title | safe }}</a>
+      <div class="conferences-item__meta"><time datetime="{{ conference.data.date }}" itemprop="datePublished">{{ conference.data.date | date('LL', locale) }}</time> · {{ conference.data.event.name }}</div>
+    </li>
+  {%- endfor -%}
+  </ul>
+{%- endif -%}

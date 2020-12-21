@@ -17,6 +17,7 @@
 
 @media (min-width: em(450)) {
   @include project-large;
+  @include conference-large;
   @include article-large;
 }
 

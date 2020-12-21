@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+---
+<article itemscope itemType="http://schema.org/CreativeWork" class="conference">
+  <header class="conference__header">
+    <h1 itemprop="name">{{ title | safe }}</h1>
+  </header>
+
+  <footer class="conference__footer">
+  {%- if dateUndefined %}
+    <span>Date à venir</span>
+  {%- else %}
+    <time datetime="{{ date }}" itemprop="datePublished">{{ date | date('LL', locale) }}</time>
+  {%- endif %}
+  ·
+  {%- if url %}
+    <a href="{{ event.url }}" rel="external">{{ event.name }} <span class="screen-reader-text">(lien externe)</span></a>
+  {%- else %}
+    <span>{{ event.name }}</span>
+  {%- endif %}
+  </footer>
+
+  <div itemprop="articleBody">
+    {{ content | safe }}
+  </div>
+
+  <aside class="conference__information">
+    <ul>
+    {%- if url -%}
+      <li><a href="{{ url }}" rel="external">Page de la conférence <span class="screen-reader-text">(lien externe)</span></a></li>
+    {%- endif -%}
+    {%- if video -%}
+      <li><a href="{{ video }}" rel="external">Vidéo <span class="screen-reader-text">(lien externe)</span></a></li>
+    {%- endif -%}
+    {%- if slide -%}
+      <li><a href="{{ slide }}" rel="external">Diaporama <span class="screen-reader-text">(lien externe)</span></a></li>
+    {%- endif -%}
+    {%- if transcript -%}
+      <li><a href="{{ transcript }}" rel="external">Retranscription <span class="screen-reader-text">(lien externe)</span></a></li>
+    {%- endif -%}
+    </ul>
+  </aside>
+</article>

@@ -14,6 +14,10 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/projets/*.md");
   });
 
+  eleventyConfig.addCollection("conferences", function (collection) {
+    return collection.getFilteredByGlob("./src/conferences/*.md");
+  });
+
   // date filter (localized)
   // https://jamstatic.fr/2019/09/07/site-multilingue-avec-eleventy/
   // https://momentjs.com/
