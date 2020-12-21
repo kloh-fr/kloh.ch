@@ -7,6 +7,12 @@ RewriteRule (.*) https://www.kloh.ch/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^kloh.ch$
 RewriteRule (.*) https://www.kloh.ch/$1 [R=301,L]
 
+# Erreurs
+ErrorDocument 401 /401.html
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
 # Encodage
 ## Déclarer UTF-8 comme jeu de caractères par défaut (appliqué par défaut aux fichiers de type text/plain et text/html)
 AddDefaultCharset utf-8
