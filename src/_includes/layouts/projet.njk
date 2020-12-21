@@ -1,0 +1,90 @@
+---
+layout: layouts/base.njk
+---
+<article itemscope itemType="http://schema.org/CreativeWork" class="project">
+  <header class="project__header">
+    <h1 itemprop="name">{{ title }}</h1>
+  </header>
+
+  <div itemprop="articleBody" class="project__description">
+    {%- if content -%}
+      {{ content | safe }}
+    {%- endif -%}
+
+    {%- if urlProjet -%}
+    <div>
+      <a href="{{ urlProjet }}" rel="external">Voir le site {{ title }} <span class="screen-reader-text">(lien externe)</span></a>
+    </div>
+    {%- endif -%}
+
+    {%- if projectOffline -%}
+    <div>
+      Ce projet n’est malheureusement plus en ligne.
+    </div>
+    {%- endif -%}
+  </div>
+
+  <footer class="project__information">
+    {#- Date -#}
+    <dl>
+      <dt class="project__year">Année</dt>
+      {%- if date -%}
+      <dd class="project__year"><time datetime="{{ date }}" itemprop="datePublished">{{ date | date('YYYY', locale) }}</time></dd>
+      {%- endif -%}
+    </dl>
+
+    {#- Employeur -#}
+    {%- if employeur -%}
+    <dl>
+      <dt class="project__employer">Employeur</dt>
+      {%- if employeurUrl -%}
+        <dd class="project__employer"><a href="{{ employeurUrl }}" rel="external">{{ employeur }} <span class="screen-reader-text">(lien externe)</span></a></dd>
+      {%- else -%}
+        <dd class="project__employer">{{ employeur }}</dd>
+      {%- endif -%}
+    </dl>
+    {%- endif -%}
+
+    {#- Client -#}
+    {%- if client -%}
+    <dl>
+      <dt class="project__client">Client</dt>
+      {%- if clientUrl -%}
+        <dd class="project__client"><a href="{{ clientUrl }}" rel="external">{{ client }} <span class="screen-reader-text">(lien externe)</span></a></dd>
+      {%- else -%}
+        <dd class="project__client">{{ client }}</dd>
+      {%- endif -%}
+    </dl>
+    {%- endif -%}
+
+    {#- Role -#}
+    {%- if service -%}
+    <dl>
+      <dt class="project__role">Intervention</dt>
+      {%- for item in service -%}
+        <dd class="project__role">{{ item }}</dd>
+      {%- endfor -%}
+    </dl>
+    {%- endif -%}
+
+    {#- Technos -#}
+    {%- if technologie -%}
+    <dl>
+      <dt class="project__techno">Outils</dt>
+      {%- for item in technologie -%}
+        <dd class="project__techno">{{ item }}</dd>
+      {%- endfor %}
+    </dl>
+    {%- endif -%}
+  </footer>
+
+  {%- if images -%}
+  <aside class="project__images">
+    {% for file in images %}
+    <figure>
+      <img src="{{ site.path.images }}/{{ permalink }}{{ file }}" alt="" loading="lazy" />
+    </figure>
+    {% endfor %}
+  </aside>
+  {%- endif -%}
+</article>

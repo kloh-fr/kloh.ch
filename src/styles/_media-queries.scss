@@ -1,5 +1,6 @@
 @media (max-width: em(449)) {
   @include nav-x-small;
+  @include projects-x-small;
 }
 
 @media (max-width: em(679)) {
@@ -14,8 +15,13 @@
   @include footer-medium;
 }
 
+@media (min-width: em(450)) {
+  @include project-large;
+}
+
 @media (min-width: em(450)) and (max-width: em(779)) {
   @include nav-small;
+  @include projects-small;
 }
 
 @media (min-width: em(1200)) {

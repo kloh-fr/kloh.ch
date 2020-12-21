@@ -358,4 +358,19 @@ address {
       }
     }
   }
+
+  .projects a {
+    &:hover,
+    &:focus {
+      background-position: 0 100%;
+
+      .project-item__title {
+        background: var(--rainbow-gradient-extended);
+        background-size: 200% 100%;
+        background-position: 100%;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
 }

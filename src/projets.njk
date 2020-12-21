@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Projets
+permalink: projets/
+---
+
+<h1>Projets et références</h1>
+
+<ul class="projects">
+{%- for project in collections.projects | reverse -%}
+  <li class="project-item">
+    <a href="/{{ project.data.permalink }}">
+      <img src="
+      {%- if project.data.miniature -%}
+        {{ site.path.images }}/{{ project.data.permalink }}
+      {%- else -%}
+        {{ site.path.images }}/projets/
+      {%- endif -%}
+      miniature.png" width="320" height="200" alt="" loading="lazy" />
+
+      <div class="project-item__title">{{ project.data.title }}</div>
+
+      <time datetime="{{ project.data.date }}" itemprop="datePublished" class="project-item__date">{{ project.data.date | date('YYYY', locale) }}</time>
+    </a>
+  </li>
+{%- endfor -%}
+</ul>

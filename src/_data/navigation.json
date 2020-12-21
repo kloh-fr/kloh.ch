@@ -8,6 +8,10 @@
     "url": "/experiences/"
   },
   {
+    "name": "Projets",
+    "url": "/projets/"
+  },
+  {
     "name": "Contact",
     "url": "/contact/"
   }
