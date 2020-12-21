@@ -1,3 +1,8 @@
+# Forcer le HTTPS
+RewriteEngine on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule (.*) https://www.kloh.ch/$1 [R=301,L]
+
 # Encodage
 ## Déclarer UTF-8 comme jeu de caractères par défaut (appliqué par défaut aux fichiers de type text/plain et text/html)
 AddDefaultCharset utf-8
