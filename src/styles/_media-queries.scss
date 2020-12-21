@@ -1,0 +1,27 @@
+@media (max-width: em(449)) {
+  @include nav-x-small;
+}
+
+@media (max-width: em(679)) {
+  @include content-wrapper-small;
+}
+
+@media (max-width: em(1199)) {
+  @include body-medium;
+  @include h1-small;
+  @include nav-medium;
+  @include content-wrapper-medium;
+  @include footer-medium;
+}
+
+@media (min-width: em(450)) and (max-width: em(779)) {
+  @include nav-small;
+}
+
+@media (min-width: em(1200)) {
+  @include body-large;
+  @include h1-large;
+  @include nav-large;
+  @include content-wrapper-large;
+  @include main-large;
+}

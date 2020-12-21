@@ -1,0 +1,22 @@
+<div class="site-navigation">
+  <a href="#content" class="site-navigation__skiplink screen-reader-text screen-reader-text--focusable">Aller au contenu</a>
+
+  <nav role="navigation">
+    <ul>
+    {%- for item in navigation -%}
+      <li>
+        {#- <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}> -#}
+        <a href="{{ item.url }}">
+          <span>
+          {%- if item.url == '/' -%}
+            <img src="{{ site.path.images }}/luc-poupard.png" width="250" height="250" alt="{{ item.name }}" />
+          {%- else -%}
+            {{ item.name }}
+          {%- endif -%}
+          </span>
+        </a>
+      </li>
+    {%- endfor -%}
+    </ul>
+  </nav>
+</div>

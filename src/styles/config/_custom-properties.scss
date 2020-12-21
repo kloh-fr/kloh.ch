@@ -1,0 +1,102 @@
+:root {
+  /* Properties whatever the theme */
+  /**
+     * From SVG Patterns Gallery
+     * https://philiprogers.com/svgpatterns/#subtledots
+     * https://jsbin.com/pudujif/embed?html,output
+     *
+     * <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+     *  <circle cx="13" cy="13" r="1" fill="#999" />
+     * </svg>
+     */
+  --bullet-background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+CjxjaXJjbGUgY3g9IjEzIiBjeT0iMTMiIHI9IjEiIGZpbGw9IiM5OTkiPjwvY2lyY2xlPgo8L3N2Zz4=");
+
+  --rainbow-gradient: linear-gradient(
+    110deg,
+    var(--rainbow-1) 0%,
+    var(--rainbow-2) 15%,
+    var(--rainbow-3) 30%,
+    var(--rainbow-4) 50%,
+    var(--rainbow-5) 70%,
+    var(--rainbow-6) 85%,
+    var(--rainbow-7) 100%
+  );
+  --rainbow-gradient-extended: linear-gradient(
+    110deg,
+    var(--page-color) 0%,
+    var(--page-color) 49%,
+    var(--rainbow-1) 51%,
+    var(--rainbow-2) 57.5%,
+    var(--rainbow-3) 65%,
+    var(--rainbow-4) 75%,
+    var(--rainbow-5) 85%,
+    var(--rainbow-6) 92.5%,
+    var(--rainbow-7) 100%
+  );
+}
+
+// https://mxb.dev/blog/color-theme-switcher/
+/* Default theme is dark */
+:root {
+  --page-background: rgba(18, 18, 32, 1);
+  --page-color: rgba(215, 215, 207, 1);
+
+  --code-background: rgba(215, 215, 207, 0.126);
+
+  --rainbow-1: rgba(255, 246, 97, 1);
+  --rainbow-2: rgba(255, 169, 89, 1);
+  --rainbow-3: rgba(253, 80, 81, 1);
+  --rainbow-4: rgb(233, 99, 204);
+  --rainbow-5: rgba(144, 99, 233, 1);
+  --rainbow-6: rgba(101, 186, 243, 1);
+  --rainbow-7: rgba(97, 239, 148, 1);
+}
+
+/* If user prefers light theme the it's light */
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-background: rgba(236, 236, 236, 1);
+    --page-color: rgba(0, 0, 57, 1);
+
+    --code-background: rgba(0, 0, 57, 0.126);
+
+    --rainbow-1: rgba(65, 18, 113, 1);
+    --rainbow-2: rgba(50, 82, 146, 1);
+    --rainbow-3: rgba(16, 118, 226, 1);
+    --rainbow-4: rgba(1, 170, 49, 1);
+    --rainbow-5: rgba(255, 125, 0, 1);
+    --rainbow-6: rgba(214, 34, 38, 1);
+    --rainbow-7: rgba(158, 14, 17, 1);
+  }
+}
+
+/* Finally the user can change theme to override system preferences */
+html[data-theme="light"] {
+  --page-background: rgba(236, 236, 236, 1);
+  --page-color: rgba(0, 0, 57, 1);
+
+  --code-background: rgba(0, 0, 57, 0.126);
+
+  --rainbow-1: rgba(65, 18, 113, 1);
+  --rainbow-2: rgba(50, 82, 146, 1);
+  --rainbow-3: rgba(16, 118, 226, 1);
+  --rainbow-4: rgba(1, 170, 49, 1);
+  --rainbow-5: rgba(255, 125, 0, 1);
+  --rainbow-6: rgba(214, 34, 38, 1);
+  --rainbow-7: rgba(158, 14, 17, 1);
+}
+
+html[data-theme="dark"] {
+  --page-background: rgba(18, 18, 32, 1);
+  --page-color: rgba(215, 215, 207, 1);
+
+  --code-background: rgba(215, 215, 207, 0.126);
+
+  --rainbow-1: rgba(255, 246, 97, 1);
+  --rainbow-2: rgba(255, 169, 89, 1);
+  --rainbow-3: rgba(253, 80, 81, 1);
+  --rainbow-4: rgb(233, 99, 204);
+  --rainbow-5: rgba(144, 99, 233, 1);
+  --rainbow-6: rgba(101, 186, 243, 1);
+  --rainbow-7: rgba(97, 239, 148, 1);
+}

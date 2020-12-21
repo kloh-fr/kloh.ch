@@ -1,3 +1,11 @@
 @import "vendor/normalize";
 @import "vendor/system-font";
 @import "vendor/fira-font";
+
+@import "config/custom-properties";
+@import "config/variables";
+@import "config/functions";
+
+@import "layout";
+
+@import "media-queries";
