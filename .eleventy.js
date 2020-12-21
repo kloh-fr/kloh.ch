@@ -1,3 +1,4 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const moment = require("moment");
 const htmlmin = require("html-minifier");
 
@@ -18,6 +19,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("conferences", function (collection) {
     return collection.getFilteredByGlob("./src/conferences/*.md");
   });
+
+  eleventyConfig.addPlugin(pluginRss);
 
   // date filter (localized)
   // https://jamstatic.fr/2019/09/07/site-multilingue-avec-eleventy/
