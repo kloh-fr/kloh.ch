@@ -20,6 +20,8 @@
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
   </script>
   {%- include "layouts/partials/head_favicons.njk" -%}
+  {%- include "layouts/partials/head_opengraph.njk" -%}
+  {%- include "layouts/partials/head_twitter-card.njk" -%}
 </head>
 <body id="top" role="document" itemscope itemtype="http://schema.org/WebPage">
   {%- include "layouts/partials/navigation.njk" -%}

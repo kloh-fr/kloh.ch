@@ -1,0 +1,11 @@
+{#- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started -#}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@klohFR" />
+<meta name="twitter:creator" content="@klohFR" />
+<meta name="twitter:title" content="{{ title }}" />
+{%- if description %}
+<meta name="twitter:description" content="{{ description }}" />
+{%- else %}
+<meta name="twitter:description" content="{{ site.description }}" />
+{%- endif %}
+<meta name="twitter:image:src" content="{{ site.url }}{{ page.url }}" />
