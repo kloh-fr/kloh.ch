@@ -21,4 +21,4 @@ images:
 miniature: true
 ---
 
-<p>Kosméline est une marque de cosmétiques naturels créée par ma conjointe Céline. Elle produit entre autres des savons et shampoings solides, des savons liquides ou encore des baumes désodorants.</p>
+<p>Kosméline est une marque de cosmétiques naturels de Suisse romande. Elle produit entre autres des savons et shampoings solides, des savons liquides ou encore des baumes désodorants.</p>
