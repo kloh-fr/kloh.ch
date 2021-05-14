@@ -14,7 +14,7 @@ body {
 .site-footer,
 .theme-switcher,
 .screen-reader-text,
-svg[hidden] {
+svg[aria-hidden="true"] {
   display: none;
 }
 
