@@ -5,7 +5,7 @@ date: 2021-04-23
 permalink: conferences/introduction-opquast/
 slide: https://speakerdeck.com/kloh/introduction-to-opquast
 event:
-  name: ProtonMail
+  name: Proton AG
 tags: past_conference
 ---
 
