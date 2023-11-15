@@ -1,11 +1,11 @@
 ---
 layout: layouts/conference.njk
-title: 'Gandi Soutient : Paris Web'
-date: 2022-09-29
-permalink: conferences/gandi-soutient-paris-web/
-video: https://www.youtube.com/watch?v=Ww5wC-Rilao
+title: 'Gandi Social Club'
+date: 2022-12-11
+permalink: conferences/gandi-social-club/
+video: https://www.youtube.com/watch?v=ATRVHsp-aog
 event:
-  name: Gandi Soutient
+  name: Gandi Social Club
 tags: past_conference
 ---
 
