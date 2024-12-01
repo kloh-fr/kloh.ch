@@ -1,8 +1,8 @@
 [
   {
-    "site": "Twitter",
-    "name": "klohFR",
-    "url": "https://twitter.com/klohFR"
+    "site": "LinkedIn",
+    "name": "luc-poupard",
+    "url": "https://www.linkedin.com/in/luc-poupard"
   },
   {
     "site": "Mastodon",
@@ -10,14 +10,9 @@
     "url": "https://framapiaf.org/@kloh"
   },
   {
-    "site": "LinkedIn",
-    "name": "luc-poupard",
-    "url": "https://www.linkedin.com/in/luc-poupard"
-  },
-  {
-    "site": "Xing",
-    "name": "Luc_Poupard",
-    "url": "https://www.xing.com/profile/Luc_Poupard"
+    "site": "Bluesky",
+    "name": "kloh.bsky.social",
+    "url": "https://bsky.app/profile/kloh.bsky.social"
   },
   {
     "site": "GitHub",
@@ -35,14 +30,14 @@
     "url": "https://codepen.io/kloh"
   },
   {
-    "site": "SlideShare",
-    "name": "klohFR",
-    "url": "https://www.slideshare.net/klohFR"
-  },
-  {
     "site": "Speaker Deck",
     "name": "kloh",
     "url": "https://speakerdeck.com/kloh"
+  },
+  {
+    "site": "SlideShare",
+    "name": "klohFR",
+    "url": "https://www.slideshare.net/klohFR"
   },
   {
     "site": "Noun Project",
@@ -73,5 +68,10 @@
     "site": "SensCritique",
     "name": "kloh",
     "url": "https://www.senscritique.com/kloh"
+  },
+  {
+    "site": "Board Game Arena",
+    "name": "VGR kloh",
+    "url": "https://boardgamearena.com/player?id=92087475"
   }
 ]
