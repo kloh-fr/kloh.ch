@@ -15,8 +15,8 @@ technologie:
 employeur: CDI SA
 employeurUrl: "https://www.cdi.ch"
 client: Synlab Suisse SA
-clientUrl: "https://www.synlab.ch"
-urlProjet: "https://www.synlab.ch"
+clientUrl: "https://www.synlab.com"
+urlProjet: "https://www.synlab.com"
 images:
   - synlab-01.jpg
   - synlab-02.png

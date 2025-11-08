@@ -14,7 +14,7 @@ technologie:
   - CSS
   - JavaScript
   - PHP
-urlProjet: "https://www.video-games-records.com"
+urlProjet: "https://www.videogamesrecords.net"
 images:
   - video-games-records-01.png
   - video-games-records-02.png
