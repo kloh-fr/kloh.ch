@@ -9,4 +9,4 @@ event:
 tags: past_conference
 ---
 
-<p>Dans le cadre de la réunion mensuelle du Lions Club La Défense, j’ai présenté ce sujet sur l'illectronisme en France.</p>
+<p>Dans le cadre de la réunion mensuelle du Lions Club La Défense, j’ai présenté ce sujet sur l’illectronisme en France.</p>
